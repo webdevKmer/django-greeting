@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'greet.css' %}" />
+    <title>Home</title>
+  </head>
+  <body class="bg-[#060225] min-h-screen flex items-center justify-center">
+    <div
+      class="w-[400px] h-[300px] bg-slate-200 rounded-xl p-10 flex flex-col items-center"
+    >
+      <p class="text-gray-500 text-xl text-center py-3">Welcome Home!</p>
+      <p class="text-gray-500 font-semibold text-lg text-center py-6">
+        Some basics about Django...
+      </p>
+      <a href="{% url 'greet' %}">To the greet page</a>
+      <a href="{% url 'greet_person' %}">Greet random people...</a>
+    </div>
+  </body>
+</html>
